@@ -1,0 +1,88 @@
+/* styles.css or app.component.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Optional: Set a background color for the body */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; /* Ensure it takes the full height of the viewport */
+}
+
+.group-container {
+  width: 800px;
+  padding: 20px;
+  background-color: hsl(301, 93%, 73%);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.group-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.group-item {
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #edfbbd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.group-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.group-detail {
+  margin-bottom: 10px;
+}
+
+.group-heading {
+  margin: 0;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.group-name,
+.group-description,
+.group-date {
+  margin: 0;
+  color: #555;
+}
+
+.group-name {
+  color: #333;
+}
+
+.group-description {
+  color: #555;
+}
+
+.group-date {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.no-groups {
+  text-align: center;
+  color: #999;
+  margin-top: 20px;
+}

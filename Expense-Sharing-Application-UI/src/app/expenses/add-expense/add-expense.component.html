@@ -1,0 +1,47 @@
+<div class="container">
+  <h2>Add Expense</h2>
+  <form (ngSubmit)="onSubmit()" #expenseForm="ngForm" novalidate>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" [(ngModel)]="expenseDto.email" name="email" [required]="true" #email="ngModel">
+      <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">
+        <span *ngIf="email.errors?.['required']">Email is required.</span>
+        <span *ngIf="email.errors?.['email']">Invalid email format.</span>
+      </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Group Name</mat-label>
+      <input matInput type="text" [(ngModel)]="expenseDto.groupName" name="groupName" [required]="true" #groupName="ngModel">
+      <mat-error *ngIf="groupName.invalid && (groupName.dirty || groupName.touched)">
+        Group Name is required.
+      </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <input matInput type="text" [(ngModel)]="expenseDto.description" name="description" [required]="true" #description="ngModel">
+      <mat-error *ngIf="description.invalid && (description.dirty || description.touched)">
+        Description is required.
+      </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Amount</mat-label>
+      <input matInput type="number" [(ngModel)]="expenseDto.amount" name="amount" [required]="true" #amount="ngModel">
+      <mat-error *ngIf="amount.invalid && (amount.dirty || amount.touched)">
+        Amount is required.
+      </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Date</mat-label>
+      <input matInput type="date" [(ngModel)]="expenseDto.date" name="date" [required]="true" #date="ngModel">
+      <mat-error *ngIf="date.invalid && (date.dirty || date.touched)">
+        Date is required.
+      </mat-error>
+    </mat-form-field>
+    
+    <button mat-raised-button color="primary" type="submit" [disabled]="expenseForm.invalid">Add Expense</button>
+  </form>
+</div>

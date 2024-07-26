@@ -1,0 +1,13 @@
+<div class="container">
+  <div *ngIf="error" class="error">{{ error }}</div>
+  <div *ngIf="groupWithMembers.length > 0">
+    <div *ngFor="let group of groupWithMembers" class="group-card">
+      <ul class="member-list">
+        <li *ngFor="let member of group.members" class="member-item">
+          <span class="member-email">{{ member.email }}</span> - 
+          <span class="member-balance">{{ member.balance | currency }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

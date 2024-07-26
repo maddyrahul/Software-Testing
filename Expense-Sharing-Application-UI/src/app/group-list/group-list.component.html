@@ -1,0 +1,28 @@
+<div class="group-list-container">
+  <div *ngIf="groups.length > 0">
+    <ul class="group-list">
+      <li *ngFor="let group of groups" class="group-item">
+        <div class="group-info">
+          <h3>{{ group.name }}</h3>
+          <p>{{ group.description }}</p>
+          <p>Created: {{ group.createdDate | date }}</p>
+          <div *ngIf="group.members && group.members.length > 0" class="group-members">
+            <h4>Members:</h4>
+            <ul>
+              <li *ngFor="let member of group.members">{{ member.email }}</li>
+            </ul>
+          </div>
+          <div *ngIf="!group.members || group.members.length === 0" class="no-members">
+            <p>No members found.</p>
+          </div>
+        </div>
+        <button class="delete-button" (click)="deleteGroup(group.groupId)">
+          <i class="fas fa-trash-alt"></i> Delete
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="groups.length === 0" class="no-groups">
+    <p>No groups found.</p>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+.custom-navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  .user-email {
+    margin-right: 10px; /* Add some space to the right of the email */
+  }
+  .navbar-nav {
+    margin-left: auto;
+  }
+  
+  .nav-item {
+    margin-left: 10px;
+  }
+  
+  .custom-btn {
+    border-width: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .custom-btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-outline-danger {
+    border-color: #dc3545;
+    color: #dc3545;
+  }
+  
+  .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+
+  /* styles.css or styles.scss */
+.snackbar-popup {
+  font-size: 1.5rem; /* Make the text bigger */
+  color: #ffffff; /* Text color */
+  background-color: #323232; /* Background color */
+  padding: 16px; /* Add some padding */
+  text-align: center; /* Center the text */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.snackbar-popup-error {
+  background-color: #d32f2f; /* Red background for errors */
+}
+
+.t{
+  background-color: bisque;
+}
